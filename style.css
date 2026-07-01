@@ -699,3 +699,22 @@ font-weight:bold;
         display: block;
     }
 }
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
