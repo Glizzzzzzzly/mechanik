@@ -693,16 +693,25 @@ font-weight:bold;
         text-align: center;
     }
 }
-.buttons{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.buttons a{
-    display:block;
-    width:100%;
-    max-width:280px;
-    text-align:center;
+/* KLUCZOWE FIX */
+.buttons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 280px;
+
+    margin: 0;
+    padding: 15px 35px;
+
+    box-sizing: border-box;
+    text-align: center;
 }
