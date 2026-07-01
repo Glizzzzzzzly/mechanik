@@ -22,25 +22,24 @@
 <header>
     <nav>
 
-        <div class="logo">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            Auto<span>Serwis</span>
-        </div>
+    <div class="logo">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        Auto<span>Serwis</span>
+    </div>
 
-        <ul id="menu">
-            <li><a href="#home">Start</a></li>
-            <li><a href="#services">Usługi</a></li>
-            <li><a href="#pricing">Cennik</a></li>
-            <li><a href="#process">Współpraca</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          
-        </ul>
+    <ul id="menu">
+        <li><a href="#home">Start</a></li>
+        <li><a href="#services">Usługi</a></li>
+        <li><a href="#pricing">Cennik</a></li>
+        <li><a href="#process">Współpraca</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
 
-        <div class="hamburger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+    <button class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-    </nav>
+</nav>
 </header>
 
 <!-- HERO -->
@@ -288,7 +287,24 @@
 
 <script src="script.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    if (!hamburger || !menu) {
+        console.log("BRAK ELEMENTÓW MENU!");
+        return;
+    }
+
+    hamburger.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        console.log("klik działa");
+    });
+
+});
+</script>
 <script>
 AOS.init({
     duration: 900,
