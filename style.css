@@ -700,18 +700,24 @@ font-weight:bold;
     gap: 15px;
 }
 
-/* KLUCZOWE FIX */
+/* RESET RÓŻNIC MIĘDZY BTN i BTN2 */
 .buttons a {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-    max-width: 280px;
-
+    width: 280px;   /* stała szerokość = brak przesunięć */
     margin: 0;
-    padding: 15px 35px;
+    padding: 15px 0;
 
-    box-sizing: border-box;
     text-align: center;
+    box-sizing: border-box;
+
+    line-height: 1;
+}
+
+/* wyrównanie konkretne dla obu */
+.btn,
+.btn2 {
+    width: 280px;
 }
